@@ -1,0 +1,6 @@
+{
+	"name": "mbed",
+	"build": {
+		"dockerfile": "Dockerfile"
+	}
+}

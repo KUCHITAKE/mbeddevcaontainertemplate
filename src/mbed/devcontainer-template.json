@@ -1,0 +1,32 @@
+{
+  "id": "mbed",
+  "version": "1.0.0",
+  "name": "mbed",
+  "description": "Develop mbed applications on Linux. Includes build tools.",
+  "documentationURL": "https://github.com/KUCHITAKE/mbeddevcaontainertemplate/tree/main/src/mbed",
+  "publisher": "KUCHITAKE",
+  "options": {
+    "imageVariant": {
+      "type": "string",
+      "description": "Debian / Ubuntu version (use Debian 12, Debian 11, Ubuntu 22.04 on local arm64/Apple Silicon):",
+      "proposals": [
+        "debian-12",
+        "debian-11",
+        "debian-10",
+        "ubuntu-22.04",
+        "ubuntu-20.04"
+      ],
+      "default": "debian-12"
+    },
+    "toolchainVersion": {
+      "type": "string",
+      "description": "GNU Arm Embedded Toolchain version:",
+      "proposals": [
+        "10.3-2021.10",
+        "10.3-2021.07",
+        "10-2020-q4-major"
+      ],
+      "default": "10.3-2021.07"
+    }
+  }
+}
