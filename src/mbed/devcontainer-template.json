@@ -1,6 +1,6 @@
 {
   "id": "mbed",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "mbed",
   "description": "Develop mbed applications on Linux. Includes build tools.",
   "documentationURL": "https://github.com/KUCHITAKE/mbeddevcaontainertemplate/tree/main/src/mbed",
