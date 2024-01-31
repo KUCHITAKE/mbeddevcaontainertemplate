@@ -10,12 +10,11 @@ RUN curl -sfL https://github.com/devcontainers-contrib/nanolayer/releases/downlo
     rm /nanolayer
 
 WORKDIR /opt/mbed-os-toolchain
-ARG TOOLCHAIN_VERSION=10.3-2021.07
-RUN TARBALL="gcc-arm-none-eabi-${TOOLCHAIN_VERSION}-$(arch)-linux.tar.bz2" && \
+RUN TARBALL="gcc-arm-none-eabi-${templateOption:toolchainVersion}-$(arch)-linux.tar.bz2" && \
     wget -q https://developer.arm.com/-/media/Files/downloads/gnu-rm/${templateOption:toolchainVersion}/${TARBALL} && \
     tar -xjf ${TARBALL} && \
     rm ${TARBALL}
-ENV MBED_GCC_ARM_PATH=/opt/mbed-os-toolchain/gcc-arm-none-eabi-10.3-2021.07/bin/
+ENV MBED_GCC_ARM_PATH=/opt/mbed-os-toolchain/gcc-arm-none-eabi-${templateOption:toolchainVersion}/bin/
 ENV PATH="${PATH}:${MBED_GCC_ARM_PATH}"
 
 
